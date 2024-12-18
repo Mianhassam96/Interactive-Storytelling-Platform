@@ -1,0 +1,27 @@
+// buttons.scss
+$primary-color: #4CAF50;  // Green color for the button
+$secondary-color: #f1f1f1; // Light background for the button when hovered
+$button-padding: 10px 20px; // Padding for the button
+$transition-speed: 0.3s; // Speed for transitions (e.g., hover effects)
+
+.button {
+  background-color: $primary-color; // Default button background color
+  color: white; // Text color
+  border: none; // No border
+  padding: $button-padding; // Apply padding
+  font-size: 16px; // Font size for the text inside the button
+  cursor: pointer; // Cursor appears as a pointer
+  border-radius: 5px; // Rounded corners
+  transition: background-color $transition-speed, transform $transition-speed; // Apply transition effects
+
+  &:hover {
+    background-color: darken($primary-color, 10%); // Darken the background color on hover
+    transform: scale(1.05); // Slightly increase the button size on hover
+  }
+
+  &:focus {
+    outline: none; // Remove the default focus outline
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); // Add a subtle shadow on focus
+  }
+}
+
